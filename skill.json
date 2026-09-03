@@ -1,0 +1,39 @@
+{
+  "name": "genpark-agent-opentelemetry-span-trace-profiler-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - OpenTelemetry distributed agent span trace annotator, latency profiler, and token consumption bottleneck analyzer.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "governance",
+  "tags": [
+    "opentelemetry",
+    "arize-phoenix",
+    "openinference",
+    "trace-profiler",
+    "agent-observability"
+  ],
+  "inputs": {
+    "root_trace_id": {
+      "type": "string"
+    },
+    "spans": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "profile_id": {
+      "type": "string"
+    },
+    "cumulative_latency_ms": {
+      "type": "number"
+    },
+    "bottleneck_span": {
+      "type": "string"
+    },
+    "trace_waterfall_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
